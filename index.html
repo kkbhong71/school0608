@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 급식 정보</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-utensils"></i> 학교 급식 정보</h1>
+        <div class="search-container">
+            <div class="input-wrapper">
+                <i class="far fa-calendar-alt"></i>
+                <input type="date" id="mealDate" class="date-input" aria-label="날짜 선택">
+            </div>
+            <button onclick="getMealInfo()" class="search-btn" aria-label="검색">
+                <i class="fas fa-search"></i> 검색
+            </button>
+        </div>
+        <div class="meal-info">
+            <h2 id="selectedDate"></h2>
+            <div id="mealContent" class="meal-content">
+                <div class="empty-state">
+                    <i class="fas fa-calendar-day"></i>
+                    <p>날짜를 선택하고 검색 버튼을 눌러주세요.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
